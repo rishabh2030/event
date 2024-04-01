@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     # dependencies
     'rest_framework',
     'rest_framework_simplejwt',
+    # services
+    'users',
 ]
 
 #  DRF configuration
@@ -56,6 +58,9 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=365),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=365),
 }
+
+# Custom user configuration
+AUTH_USER_MODEL = 'users.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

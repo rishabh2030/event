@@ -1,0 +1,5 @@
+EMAIL="email"
+PASSWORD="password"
+DOB="dob"
+NAME="name"
+USER="user"
