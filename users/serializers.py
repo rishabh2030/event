@@ -49,9 +49,6 @@ class UserLoginSerializer(serializers.ModelSerializer):
         """
         email = attrs.get(keys.EMAIL)
         password = attrs.get(keys.PASSWORD)
-        print("Checking credentials",attrs)
-        print("email:", email)
-        print("password:", password)
 
         if email and password:
             user = authenticate(email=email, password=password)
