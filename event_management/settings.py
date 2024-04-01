@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # services
     'users',
     'event_manager',
+    'event_operations',
 ]
 
 #  DRF configuration

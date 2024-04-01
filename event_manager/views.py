@@ -3,6 +3,7 @@ from .models import Event
 from .serializers import EventSerializer
 from rest_framework.response import Response
 from helper.functions import HttpStatusCode,ResponseHandling
+from rest_framework.permissions import IsAuthenticated
 from helper import messages
 
 class EventListCreateAPIView(generics.ListCreateAPIView):
@@ -11,6 +12,7 @@ class EventListCreateAPIView(generics.ListCreateAPIView):
     """
     queryset = Event.objects.all()
     serializer_class = EventSerializer
+    permission_classes = [IsAuthenticated]
 
     def create(self, request, *args, **kwargs):
         try:
@@ -30,6 +32,7 @@ class EventRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     """
     queryset = Event.objects.all()
     serializer_class = EventSerializer
+    permission_classes = [IsAuthenticated]
     lookup_field = 'id'  
 
     def retrieve(self, request, *args, **kwargs):
