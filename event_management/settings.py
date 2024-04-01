@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     # services
     'users',
+    'event_manager',
 ]
 
 #  DRF configuration
